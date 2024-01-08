@@ -1,105 +1,123 @@
 .container {
-    max-width: 1200px;
-    margin: auto auto;
+  max-width: 1200px;
+  margin: auto auto;
 }
 
 .box {
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    background-color: #f2f2f2;
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 24px;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
 }
 
 .box.tall {
-    height: 100px;
+  height: 100px;
 }
 
 .box.wide {
-    width: 100px;
+  width: 100px;
 }
 
-
-.red{
-    background-color: red;
+.red {
+  background-color: red;
 }
 
-.blue{
-    background-color: blue;
+.blue {
+  background-color: blue;
 }
 
-.green{
-    background-color: green;
+.green {
+  background-color: green;
 }
-
 
 /* TODO 1 */
 .todo-1-container {
-    /* TODO 1.1.1 Set the display of this div to flex*/
-    /* TODO 1.1.2 Set the flex direction to row. Then set it to column. What's the difference?*/
-    /* Answer: */
-    /* TODO 1.1.3 Set the flex direction to row. Then enable flex wrap. What does wrap do? */
-    /* Answer: */
-    /* Todo 1.1.4 Set the gap of the container to 10px. Now change it to 20px. What does gap do? */
-    /* Answer: */
-
+  /* TODO 1.1.1 Set the display of this div to flex*/
+  display: flex;
+  /* TODO 1.1.2 Set the flex direction to row. Then set it to column. What's the difference?*/
+  flex-direction: row;
+  /* Answer: flex-direction: row, makes the boxes align horizontally while flex-direction: column, align the boxes vertically. */
+  /* TODO 1.1.3 Set the flex direction to row. Then enable flex wrap. What does wrap do? */
+  flex-wrap: wrap;
+  /* Answer: flex-wrap: wrap, pushes the boxes that reaches the end of the window to the next line rather than they being forced to a single line and looking smaller when the window is too small. */
+  /* Todo 1.1.4 Set the gap of the container to 10px. Now change it to 20px. What does gap do? */
+  gap: 5px;
+  /* Answer:  gap: <value>, adds gaps between all of the boxes ( depends on the value of the gap you input).*/
 }
 
 /* TODO 2 */
-.todo-2-container{
-    /* TODO 1.2.1 Set the display to flex and flex direction to row */
-    /* TODO 1.2.2 Justify the content to start, then end, then center. Make sure to see how the position of the divs change*/
-    /* TODO 1.2.3 Align the items start, then end, then center. Make sure to see how the position of the divs change*/
-    /* TODO 1.2.4 Set the flex direction to column and play around with justify-content and align-items */
+.todo-2-container {
+  /* TODO 1.2.1 Set the display to flex and flex direction to row */
+  display: flex;
+  flex-direction: row;
+  /* TODO 1.2.2 Justify the content to start, then end, then center. Make sure to see how the position of the divs change*/
+  justify-content: center;
+  /* TODO 1.2.3 Align the items start, then end, then center. Make sure to see how the position of the divs change*/
+  align-items: end;
+  /* TODO 1.2.4 Set the flex direction to column and play around with justify-content and align-items */
+  height: 800px;
+  flex-direction: column;
+  /*In order to visibly see the effect of justify-content when the flex-direction is set to column, you have to add space to the height of the container..*/
 }
 
 /* TODO 3 */
-.todo-3-container{
-    /* Todo 1.3.1 Set the display to flex and align items center */
+.todo-3-container {
+  /* Todo 1.3.1 Set the display to flex and align items center */
+  display: flex;
+  align-items: center;
 }
 
 /* Select the red box */
-.todo-3-container __{
-    /* Todo 1.3.2 Align this item to start. Try out the other possible values. What happens? */
-    /* Answer: */
+.todo-3-container .red {
+  /* Todo 1.3.2 Align this item to start. Try out the other possible values. What happens? */
+  align-items: flex-start;
+  /* Answer: I had to edit the box 1 in container 3 to be a red box, align-items makes it so that the 1 moves according to the value you set.*/
 }
 
 /* Select the green box */
-.todo-3-container __{
-    /* Todo 1.3.3 Set flex grow to 1 */
+.todo-3-container .green {
+  /* Todo 1.3.3 Set flex grow to 1 */
+  flex-grow: 1;
 }
 
 /* Select the blue box */
-.todo-3-container __{
-    /* Todo 1.3.4 Set flex grow to 2. Try out the other values. What happens? */
-    /* Answer: */
+.todo-3-container .blue {
+  /* Todo 1.3.4 Set flex grow to 2. Try out the other values. What happens? */
+  flex-grow: 2;
+  /* Answer: I had to edit box 2 and box 3 in container 3 to be green and blue, flex-grow makes it so that the item takes more available space in the container.
+  Having a higher flex-grow means that it takes more space than other items with less or no flex-grow value.*/
 }
 
 /* TODO 4 */
-.todo-4-container{
-    /* Set the display to flex */
+.todo-4-container {
+  /* Set the display to flex */
+  display: flex;
 }
 
 /* Select the red box */
-.todo-4-container ___{
-    /* Set margin left to auto.  */
+.todo-4-container .red {
+  /* Set margin left to auto.  */
+  margin-left: auto;
+  order: 3;
 }
 
 /* Select the green box */
-.todo-4-container __{
-    /* Set margin right to auto */
+.todo-4-container .green {
+  /* Set margin right to auto */
+  margin-right: auto;
+  order: 2;
+
 }
 
 /* Select the blue box */
-.todo-4-container ___{
-    /* Set the order to  1. Try chaging the order of the other divs. What does order do?*/
-    /* Answer: */
+.todo-4-container .blue{
+  /* Set the order to  1. Try chaging the order of the other divs. What does order do?*/
+  order: 1;
+  /* Answer: */
+  
 }
-
-
-
-
