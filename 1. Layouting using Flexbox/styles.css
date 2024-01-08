@@ -62,7 +62,7 @@
   /* TODO 1.2.4 Set the flex direction to column and play around with justify-content and align-items */
   height: 800px;
   flex-direction: column;
-  /*In order to visibly see the effect of justify-content when the flex-direction is set to column, you have to add space to the height of the container..*/
+  /*In order to visibly see the effect of justify-content when the flex-direction is set to column, you have to add space to the height of the container.*/
 }
 
 /* TODO 3 */
@@ -75,7 +75,7 @@
 /* Select the red box */
 .todo-3-container .red {
   /* Todo 1.3.2 Align this item to start. Try out the other possible values. What happens? */
-  align-items: flex-start;
+  align-items: end;
   /* Answer: I had to edit the box 1 in container 3 to be a red box, align-items makes it so that the 1 moves according to the value you set.*/
 }
 
@@ -103,21 +103,19 @@
 .todo-4-container .red {
   /* Set margin left to auto.  */
   margin-left: auto;
-  order: 3;
+  order: 2;
 }
 
 /* Select the green box */
 .todo-4-container .green {
   /* Set margin right to auto */
   margin-right: auto;
-  order: 2;
-
+  order: 3;
 }
 
 /* Select the blue box */
-.todo-4-container .blue{
+.todo-4-container .blue {
   /* Set the order to  1. Try chaging the order of the other divs. What does order do?*/
   order: 1;
-  /* Answer: */
-  
+  /* Answer: Changes the order of the boxes depending on the value of the order.  */
 }
